@@ -19,7 +19,7 @@
 
     <title>Login Page</title>
 </head>
-<body class="h-full">
+<body class="h-full bg-gradient-to-r from-cyan-50 to-red-50 ">
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
           <img class="mx-auto h-20" src="../images/real_logo.png" alt="Yahya SALIM logo">
@@ -31,30 +31,33 @@
             <div>
               <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Username</label>
               <div class="mt-2">
-                <input id="username" name="username" type="text" autocomplete="username" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                <input id="username" name="username" type="text" autocomplete="username" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6">
               </div>
             </div>
       
             <div>
               <div class="flex items-center justify-between">
                 <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
-                <!-- <div class="text-sm">
-                  <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500">Forgot password?</a>
-                </div> -->
               </div>
               <div class="mt-2">
-                <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6">
               </div>
             </div>
       
             <div>
-              <button type="submit" class="flex w-full justify-center rounded-md bg-gradient-to-r from-sky-600 to-indigo-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#f1424b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
+              <button type="submit" class="flex w-full justify-center rounded-md 
+                bg-gradient-to-r from-sky-600 to-red-500
+                px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm 
+                focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                focus-visible:outline-indigo-600">
+                  Sign in
+              </button>
             </div>
           </form>
       
           <p class="mt-10 text-center text-sm text-gray-500">
             Not a member?
-            <a href="./signUpPage" class="font-semibold leading-6 text-[#de242d] hover:text-[#f1424b]">Create account</a>
+            <a href="./signUpPage" class="font-semibold leading-6 text-sky-600 hover:text-sky-500">Create account</a>
           </p>
         </div>
       </div>

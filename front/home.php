@@ -45,15 +45,18 @@
           
         <div class="text-center">
           <h3 class="text-3xl my-3 tracking-normal text-gray-900 sm:text-4xl">
-            Welcome <b>
+            Welcome 
             <?php 
+              if($_SESSION['dailyConnexion']>1) echo "back ";
+              echo "<b>";
               echo $_SESSION['user_name'];
+              if($_SESSION['dailyConnexion']>1) echo "<p>&#127881</p>";
             ?></b>
           </h3>
         </div>
 
         <div class="text-center">
-          <h1 class="text-4xl my-24 font-bold tracking-normal text-gray-900 sm:text-5xl">
+          <h1 class="text-4xl my-20 font-bold tracking-normal text-gray-900 sm:text-5xl">
           Your account statistics
           </h1>
         </div>
