@@ -21,15 +21,15 @@
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
 
       <div class="flex flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
+        <a href="http://linkedin.com/in/yahyasalim" target="_blank" class="-m-1.5 p-1.5">
+          <span class="sr-only">Yahya SALIM Logo</span>
           <img class="h-20 w-auto" src="../images/real_logo.png" alt="Yahya SALIM logo">
         </a>
       </div>
 
       <p class="text-xl">
         Creator's
-        <a href="http://linkedin.com/in/yahyasalim" target="_blank" class="text-[#0e76a8] underline text-2xl font-semibold leading-6 text-gray-900">
+        <a href="http://linkedin.com/in/yahyasalim" target="_blank" class="text-[#0e76a8] underline text-2xl font-semibold leading-6">
          LinkedIn</a>
         profile
       </p>
