@@ -13,6 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/output.css" rel="stylesheet">
+    <link rel="icon" href="./images/real_logo.png" type = "image/x-icon">
     <title>Welcome</title>
 </head>
 <body class="bg-gradient-to-r from-cyan-50 to-red-50 h-full">
