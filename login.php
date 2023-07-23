@@ -57,19 +57,19 @@ function connect($connexion) {
                 
                 $_SESSION['dailyConnexion'] = $dailyConnexion;
                 
-                header("Location: ../front/home"); // Remplacez "success.php" par la page souhaitée
+                header("Location: ./index.php"); // Remplacez "success.php" par la page souhaitée
             } else {
                 // Authentification échouée
                 // Vous pouvez rediriger l'utilisateur vers une page d'échec ou afficher un message d'erreur
                 $_SESSION['wrong_password'] = 'true';
-                header("Location: ../front/home");
+                header("Location: ./index.php");
                 
             }
         } else {
             // Authentification échouée
             // Vous pouvez rediriger l'utilisateur vers une page d'échec ou afficher un message d'erreur
             $_SESSION['wrong_password'] = 'true';
-            header("Location: ../front/home");
+            header("Location: ./index.php");
             
         }
     }

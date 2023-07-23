@@ -3,7 +3,7 @@
 
  
   if(!isset($_SESSION['user_name'])) {
-    header("Location: ../front/index");
+    header("Location: ./signin.php");
   }
 ?>
 
@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../dist/output.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
     <title>Welcome</title>
 </head>
 <body class="bg-gradient-to-r from-cyan-50 to-red-50 h-full">
@@ -28,7 +28,7 @@
       </div>
       
       <div class="flex flex-1 justify-end">
-        <a href="../back/logout" class="text-base font-semibold leading-6 text-gray-900">Log out <span aria-hidden="true">&rarr;</span></a>
+        <a href="./logout.php" class="text-base font-semibold leading-6 text-gray-900">Log out <span aria-hidden="true">&rarr;</span></a>
       </div>
     </nav>
   </header>
