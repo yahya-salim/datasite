@@ -77,7 +77,7 @@
       
           <p class="mt-10 text-center text-sm text-gray-500">
             Not a member?
-            <a href="./signUpPage" class="font-semibold leading-6 text-sky-600 hover:text-sky-500">Create account</a>
+            <a href="./signuppage" class="font-semibold leading-6 text-sky-600 hover:text-sky-500">Create account</a>
           </p>
         </div>
       </div>
