@@ -61,12 +61,14 @@ function connect($connexion) {
             } else {
                 // Authentification échouée
                 // Vous pouvez rediriger l'utilisateur vers une page d'échec ou afficher un message d'erreur
+                $_SESSION['wrong_password'] = 'true';
                 header("Location: ../front/home");
                 
             }
         } else {
             // Authentification échouée
             // Vous pouvez rediriger l'utilisateur vers une page d'échec ou afficher un message d'erreur
+            $_SESSION['wrong_password'] = 'true';
             header("Location: ../front/home");
             
         }

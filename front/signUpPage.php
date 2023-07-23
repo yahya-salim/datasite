@@ -2,6 +2,10 @@
   session_start();
   // Détruire toutes les variables de session
   if(isset($_SESSION["user_name"])) {
+    header("Location: ./home");
+  } else if(isset($_SESSION["inscription_reussi"])){
+    
+  } else {
     session_unset();
   }
 ?>
@@ -14,7 +18,7 @@
     <link href="../dist/output.css" rel="stylesheet">
     <title>Create account</title>
 </head>
-<body class="h-full">
+<body class="h-full bg-gradient-to-r from-cyan-50 to-red-50">
 
   <div id="modal_success" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
@@ -66,9 +70,21 @@
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form action="../back/signUp" class="space-y-6" method="POST">
             <div>
+              <div id="used_name_alert" class="hidden flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100 " role="alert">
+                  <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                  </svg>
+                  <span class="sr-only">Info</span>
+                  <div>
+                    A user with this username already exists.
+                  </div>
+                </div>
               <label for="usernameSignUp" class="block text-sm font-medium leading-6 text-gray-900">Username</label>
               <div class="mt-2">
-                <input id="usernameSignUp" name="usernameSignUp" type="text" autocomplete="username" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                <input id="usernameSignUp" name="usernameSignUp" type="text" autocomplete="username" required 
+                class="block w-full rounded-md border-sky-200 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset 
+                ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 
+                sm:text-sm sm:leading-6">
               </div>
               <div id="user_exists" class="mb-4 mt-2 rounded-lg text-red-800 text-sm hidden" role="alert">
                 <span class="font-medium">A user with that username already exists. Try another one.</span>
@@ -84,19 +100,27 @@
                 </div> -->
               </div>
               <div class="mt-2">
-                <input id="passwordSignUp" name="passwordSignUp" type="password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                <input id="passwordSignUp" name="passwordSignUp" type="password" required 
+                class="block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1
+                border-sky-200 
+                ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset 
+                focus:ring-sky-600 sm:text-sm sm:leading-6">
               </div>
             </div>
       
             <div>
-              <button type="submit" class="flex w-full justify-center rounded-md bg-[#0298c6] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#00b2db] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              <button type="submit" class="flex w-full justify-center rounded-md 
+              bg-gradient-to-r from-sky-600 to-red-500
+              px-3  py-1.5 text-sm font-semibold leading-6 text-white shadow-sm 
+              focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 
+              focus-visible:outline-indigo-600">
                 Create account
             </button>
             </div>
           </form>
           <p class="mt-10 text-center text-sm text-gray-500">
-            Already registred ?
-            <a href="./index" class="font-semibold leading-6 text-[#0298c6] hover:text-[#00b2db]">Sign In</a>
+            Already registred?
+            <a href="./index" class="font-semibold leading-6 text-sky-600 hover:text-sky-500">Sign In</a>
           </p>
         </div>
       </div>
@@ -118,12 +142,14 @@
             });
             console.log("registred submitted ok");
         </script>';
+        session_unset();
     } else {
       echo'
         <script>
-          document.getElementById("user_exists").classList.remove("hidden");
+          document.getElementById("used_name_alert").classList.remove("hidden");
         </script>
       ';
+      session_unset();
     }
   }
 ?>

@@ -21,15 +21,15 @@
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
 
       <div class="flex flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
+        <a href="http://linkedin.com/in/yahyasalim" target="_blank" class="-m-1.5 p-1.5">
+          <span class="sr-only">Yahya SALIM Logo</span>
           <img class="h-20 w-auto" src="../images/real_logo.png" alt="Yahya SALIM logo">
         </a>
       </div>
 
       <p class="text-xl">
         Creator's
-        <a href="http://linkedin.com/in/yahyasalim" target="_blank" class="text-[#0e76a8] underline text-2xl font-semibold leading-6 text-gray-900">
+        <a href="http://linkedin.com/in/yahyasalim" target="_blank" class="text-[#0e76a8] underline text-2xl font-semibold leading-6">
          LinkedIn</a>
         profile
       </p>
@@ -45,15 +45,18 @@
           
         <div class="text-center">
           <h3 class="text-3xl my-3 tracking-normal text-gray-900 sm:text-4xl">
-            Welcome <b>
+            Welcome 
             <?php 
+              if($_SESSION['dailyConnexion']>1) echo "back ";
+              echo "<b>";
               echo $_SESSION['user_name'];
+              if($_SESSION['dailyConnexion']>1) echo "<p>&#127881</p>";
             ?></b>
           </h3>
         </div>
 
         <div class="text-center">
-          <h1 class="text-4xl my-24 font-bold tracking-normal text-gray-900 sm:text-5xl">
+          <h1 class="text-4xl my-20 font-bold tracking-normal text-gray-900 sm:text-5xl">
           Your account statistics
           </h1>
         </div>
