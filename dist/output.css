@@ -772,6 +772,11 @@ select {
   margin-bottom: 0.75rem;
 }
 
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1021,6 +1026,11 @@ select {
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#0298c6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 152 198 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
 }
@@ -1047,6 +1057,10 @@ select {
 
 .to-red-500 {
   --tw-gradient-to: #ef4444 var(--tw-gradient-to-position);
+}
+
+.to-indigo-400 {
+  --tw-gradient-to: #818cf8 var(--tw-gradient-to-position);
 }
 
 .stroke-current {
@@ -1251,6 +1265,16 @@ select {
   color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 
+.text-\[\#0298c6\] {
+  --tw-text-opacity: 1;
+  color: rgb(2 152 198 / var(--tw-text-opacity));
+}
+
+.text-\[\#de242d\] {
+  --tw-text-opacity: 1;
+  color: rgb(222 36 45 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1309,6 +1333,16 @@ select {
   background-color: rgb(16 185 129 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-\[\#00b2db\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 178 219 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#f1424b\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 66 75 / var(--tw-bg-opacity));
+}
+
 .hover\:text-indigo-500:hover {
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity));
@@ -1317,6 +1351,16 @@ select {
 .hover\:text-sky-500:hover {
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
+.hover\:text-\[\#00b2db\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 178 219 / var(--tw-text-opacity));
+}
+
+.hover\:text-\[\#f1424b\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(241 66 75 / var(--tw-text-opacity));
 }
 
 .focus\:ring-2:focus {
@@ -1332,6 +1376,11 @@ select {
 .focus\:ring-sky-600:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(2 132 199 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-indigo-600:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(79 70 229 / var(--tw-ring-opacity));
 }
 
 .focus-visible\:outline:focus-visible {
