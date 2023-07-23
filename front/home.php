@@ -15,7 +15,7 @@
     <link href="../dist/output.css" rel="stylesheet">
     <title>Welcome</title>
 </head>
-<body class="bg-white h-full">
+<body class="bg-gradient-to-r from-cyan-50 to-red-50 h-full">
     
   <header class="absolute inset-x-0 top-0 z-50">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -33,7 +33,7 @@
     </nav>
   </header>
 
-    <div class="bg-white py-24 sm:py-32">
+    <div class=" py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1">
           
         <div class="text-center">
