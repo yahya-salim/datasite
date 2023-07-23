@@ -8,6 +8,6 @@ session_unset();
 session_destroy();
 
 // Rediriger vers la page de login après la déconnexion
-header('Location: ../front/index');
+header('Location: ./signin.php');
 exit();
 ?>

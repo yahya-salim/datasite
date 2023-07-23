@@ -2,7 +2,7 @@
   session_start();
   // Détruire toutes les variables de session
   if(isset($_SESSION["user_name"])) {
-    header("Location: ./home");
+    header("Location: ./index.php");
   } else if(isset($_SESSION["inscription_reussi"])){
     
   } else {
@@ -15,7 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../dist/output.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
     <title>Create account</title>
 </head>
 <body class="h-full bg-gradient-to-r from-cyan-50 to-red-50">
@@ -23,7 +23,7 @@
   <div id="modal_success" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
     <div class="fixed inset-0 z-10 overflow-y-auto">
-      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+      <div class="flex min-h-full items-end justify-center p-4 text-center items-center p-0">
         
         <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
           <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
@@ -64,11 +64,11 @@
 
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img class="mx-auto h-20" src="../images/real_logo.png" alt="Yahya SALIM logo">          <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Create account</h2>
+          <img class="mx-auto h-20" src="./images/real_logo.png" alt="Yahya SALIM logo">          <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Create account</h2>
         </div>
       
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form action="../back/signUp" class="space-y-6" method="POST">
+          <form action="./signUp.php" class="space-y-6" method="POST">
             <div>
               <div id="used_name_alert" class="hidden flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100 " role="alert">
                   <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -95,9 +95,6 @@
             <div>
               <div class="flex items-center justify-between">
                 <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
-                <!-- <div class="text-sm">
-                  <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500">Forgot password?</a>
-                </div> -->
               </div>
               <div class="mt-2">
                 <input id="passwordSignUp" name="passwordSignUp" type="password" required 

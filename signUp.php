@@ -41,7 +41,7 @@ function getMaxId($connexion) {
             } catch(mysqli_sql_exception $exception) {
                 $connexion->rollback();
                 $_SESSION['inscription_reussi'] = 'false';
-                header("Location: ../front/signUpPage");
+                header("Location: ./signUpPage.php");
             }
             
         }
@@ -50,6 +50,6 @@ function getMaxId($connexion) {
 
     if(createAccout($conn)==true) {
         $_SESSION['inscription_reussi'] = 'true';
-        header("Location: ../front/signUpPage");
+        header("Location: ./signUpPage.php");
     }
 ?>

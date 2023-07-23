@@ -2,7 +2,7 @@
   session_start();
   
   if(isset($_SESSION['user_name'])) {
-    header("Location: ./home");
+    header("Location: ./index.php");
  }
 ?>
 
@@ -13,19 +13,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../dist/output.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
 
     <title>Login Page</title>
 </head>
 <body class="h-full bg-gradient-to-r from-cyan-50 to-red-50 ">
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img class="mx-auto h-20" src="../images/real_logo.png" alt="Yahya SALIM logo">
+          <img class="mx-auto h-20" src="./images/real_logo.png" alt="Yahya SALIM logo">
           <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
         </div>
       
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form action="../back/login" class="space-y-6" method="POST">
+          <form action="./login.php" class="space-y-6" method="POST">
             <div>
 
               <!-- Alert to show username or password is wrong -->
@@ -82,6 +82,10 @@
         </div>
       </div>
 </body>
+
+  <script>
+    
+  </script>
 </html>
 <?php 
       if(isset($_SESSION['wrong_password'])) {
